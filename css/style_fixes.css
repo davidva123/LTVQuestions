@@ -1,4 +1,10 @@
 /* Fix For Button Click Color */
-#btn-search:active, #btn-search:enabled {
+#btn-search:active,
+#btn-search:enabled {
   background-color: #f6bc25;
+}
+
+/* Person Image Fix */
+.person-image {
+  max-height: 25px;
 }
