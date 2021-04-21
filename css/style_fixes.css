@@ -1,0 +1,4 @@
+/* Fix For Button Click Color */
+#btn-search:active, #btn-search:enabled {
+  background-color: #f6bc25;
+}
