@@ -8,3 +8,8 @@
 .person-image {
   max-height: 25px;
 }
+
+/* Fix for valid email spacing */
+.error-spacer{
+  display: none;
+}
