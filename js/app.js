@@ -70,7 +70,7 @@ $(document).ready(function () {
       phone = $('input[type="text"]').val().toLowerCase();
 
       var x, y;
-      regEx = /^(\+0?1\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/;
+      regEx = /^\s*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$/;
       if (phone.match(regEx)) {
         x = true;
       } else {
@@ -84,7 +84,7 @@ $(document).ready(function () {
         const proxyurl = "";
         const url =
           "https://ltv-data-api.herokuapp.com/api/v1/records.json?phone=" +
-          email;
+          phone;
         fetch(proxyurl + url)
           .then((response) => response.text())
           .then(function (contents) {
@@ -143,7 +143,7 @@ $(document).ready(function () {
     if (comboField.getAttribute("name") == "phone") {
       phone = $('input[type="text"]').val().toLowerCase();
 
-      regEx = /^(\+0?1\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/;
+      regEx = /^\s*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$/;
       if (phone.match(regEx)) {
         x = true;
         document
