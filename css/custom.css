@@ -10,6 +10,7 @@
 --------------------------------------------------------
 --| [SECTION] Search
 --| [SECTION] QA Fixes
+--| [SECTION] LoadingImage
 --------------------------------------------------------
 ----------------------------------------------------- */
 
@@ -36,18 +37,18 @@
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   -ms-flex-line-pack: center;
-      align-content: center;
+  align-content: center;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 @media screen and (max-width: 450px) {
   .search-btn-box {
@@ -101,13 +102,11 @@
   padding: 8px 12px 8px 8px;
 }
 
-
 /* ************************************************************
 ***************************************************************
 --- [SECTION] QA Fixes ---
 ***************************************************************
 ************************************************************ */
-
 
 /* Fix For Button Click Color */
 #btn-search:active,
@@ -121,7 +120,7 @@
 }
 
 /* Fix for valid email spacing */
-.error-spacer{
+.error-spacer {
   display: none;
 }
 
@@ -135,5 +134,38 @@
   .error-spacer {
     display: block;
   }
-  
+}
+/* ************************************************************
+***************************************************************
+--- [SECTION] LoadingImage ---
+***************************************************************
+************************************************************ */
+.loadingsection {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f8f8f8;
+}
+.loadingsection img {
+  width: 151px;
+  height: 151px;
+  display: block;
+  clear: both;
+  flex-wrap: wrap;
+}
+
+.loadingsection p {
+  font-family: "Lato", sans-serif;
+  font-size: 24px;
+  color: #004a80;
+  text-align: center;
+  font-weight: 700;
+  display: block;
+  align-self: auto;
+}
+
+.result {
+  display: none;
 }
