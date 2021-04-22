@@ -3,9 +3,9 @@ let comboField = document.getElementById("combofield");
 let emailbtn = document.getElementById("emailbtn");
 let phonebtn = document.getElementById("phonebtn");
 let activebuttonstyle = "search-btn-active";
-let errormsg = document.getElementById('errormsg');
-let erroremail = 'Please enter a valid email address';
-let errorphone = 'Please enter a valid phone number';
+let errormsg = document.getElementById("errormsg");
+let erroremail = "Please enter a valid email address";
+let errorphone = "Please enter a valid phone number";
 
 //Show the correct text and button highlighting in the  email button
 emailbtn.addEventListener("click", function (e) {
@@ -67,11 +67,11 @@ $(document).ready(function () {
     if (comboField.getAttribute("name") == "phone") {
       e.preventDefault();
       localStorage.clear();
-      email = $('input[type="text"]').val().toLowerCase();
+      phone = $('input[type="text"]').val().toLowerCase();
 
       var x, y;
-      regEx = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
-      if (email.match(regEx)) {
+      regEx = /^(\+0?1\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/;
+      if (phone.match(regEx)) {
         x = true;
       } else {
         x = false;
@@ -83,7 +83,7 @@ $(document).ready(function () {
           .parentNode.classList.remove("error");
         const proxyurl = "";
         const url =
-          "https://ltv-data-api.herokuapp.com/api/v1/records.json?email=" +
+          "https://ltv-data-api.herokuapp.com/api/v1/records.json?phone=" +
           email;
         fetch(proxyurl + url)
           .then((response) => response.text())
@@ -141,9 +141,10 @@ $(document).ready(function () {
     } // End email keypress section
 
     if (comboField.getAttribute("name") == "phone") {
-      email = $('input[type="text"]').val().toLowerCase();
-      regEx = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
-      if (email.match(regEx)) {
+      phone = $('input[type="text"]').val().toLowerCase();
+
+      regEx = /^(\+0?1\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/;
+      if (phone.match(regEx)) {
         x = true;
         document
           .querySelector('input[type="text"]')
@@ -161,8 +162,8 @@ $(document).ready(function () {
         if (x === true) {
           const proxyurl = "";
           const url =
-            "https://ltv-data-api.herokuapp.com/api/v1/records.json?email=" +
-            email;
+            "https://ltv-data-api.herokuapp.com/api/v1/records.json?phone=" +
+            phone;
           fetch(proxyurl + url)
             .then((response) => response.text())
             .then(function (contents) {
