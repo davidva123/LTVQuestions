@@ -88,14 +88,38 @@
           </h2>
         </div>
         <form>
+          <div class="search-selection container">
+            <div class="row">
+              <p
+                class="search-text align-middle col-md-2 d-none d-sm-none d-md-block"
+              >
+                Type of Search:
+              </p>
+              <div class="search-btn-box">
+                <button
+                  id="emailbtn"
+                  class="search-btn search-btn-email search-btn-active col-md-4"
+                >
+                  Email Address
+                </button>
+                <button
+                  id="phonebtn"
+                  class="search-btn search-btn-phone col-md-4"
+                >
+                  Phone Number
+                </button>
+              </div>
+            </div>
+          </div>
           <div class="input-group">
             <input
               class="form-control"
+              id="combofield"
               type="text"
               name="email"
               placeholder="Enter an Email Address"
             />
-            <p class="error-msg">Please enter a valid email address</p>
+            <p class="error-msg" id="errormsg">Please enter a valid email address</p>
             <p class="error-spacer">&nbsp;</p>
             <button
               id="btn-search"
