@@ -25,10 +25,11 @@
   color: #ffffff;
   letter-spacing: 0;
   font-weight: 400;
-  text-align: center;
+  text-align: left;
   padding-top: 15px;
   padding-right: 24px;
   text-transform: uppercase;
+  padding-left: 0px;
 }
 
 .search-btn-box {
@@ -102,7 +103,8 @@
   padding: 8px 12px 8px 8px;
 }
 
-.search-btn-phone:focus, .search-btn-email:focus{
+.search-btn-phone:focus,
+.search-btn-email:focus {
   outline: none;
 }
 
