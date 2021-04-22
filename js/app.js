@@ -27,6 +27,12 @@ phonebtn.addEventListener("click", function (e) {
 });
 
 $(document).ready(function () {
+
+
+//Load the header and the footer
+$(".navsection").load('../layout/navsection.htm');
+$(".footersection").load('../layout/footersection.htm');
+
   $("#btn-search").on("click", function (e) {
     //adding logic here to determine which box is pressed
     if (comboField.getAttribute("name") == "email") {
